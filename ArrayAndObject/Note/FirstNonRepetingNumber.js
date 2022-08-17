@@ -16,7 +16,8 @@ function firstNonRepeating(str) {
     return -1;
 }
 
-console.log(firstNonRepeating("Relevel"));
+console.log(firstNonRepeating("abab"));
+console.log(firstNonRepeating("a a b b b b "));
 
 /**
  * str = level
