@@ -51,3 +51,14 @@ class DLL {
         }
     }
 }
+const dll = new DLL();
+dll.addAtHead(5);
+dll.addAtHead(4);
+dll.addAtHead(3);
+dll.addAtHead(2);
+dll.addAtHead(1);
+dll.display();
+console.log("........");
+dll.removeAtHead(5);
+dll.display();
+console.log("........");
