@@ -34,6 +34,7 @@ class DLL {
          */
         if (this.head == null) return;
         let temp = this.head.next; // stored access to new head
+
         temp.prev = null; // we need to mark the prev of the new head to null
         this.head.next = null; // de linked the old head
         this.head = temp; // updated the head
@@ -53,12 +54,12 @@ class DLL {
 }
 const dll = new DLL();
 dll.addAtHead(5);
-dll.addAtHead(4);
-dll.addAtHead(3);
-dll.addAtHead(2);
-dll.addAtHead(1);
-dll.display();
-console.log("........");
-dll.removeAtHead(5);
-dll.display();
-console.log("........");
+// dll.addAtHead(4);
+// dll.addAtHead(3);
+// dll.addAtHead(2);
+// dll.addAtHead(1);
+// dll.display();
+// console.log("........");
+// dll.removeAtHead(5);
+// dll.display();
+// console.log("........");

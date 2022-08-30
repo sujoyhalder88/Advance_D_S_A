@@ -40,16 +40,16 @@
 
 //===================xxx=================================================
 
-function maxSlidingWindow(nums, k) {
-    let max;
-    for (let i = 0; i <= nums.length - k; i++) {
-        max = nums[i];
-        for (let j = 1; j < k; j++) {
-            if (nums[i + j] > max) {
-                max = nums[i + j];
-            }
-        }
-        console.log(max);
-    }
-}
-maxSlidingWindow([1, 3, -1, -3, 5, 3, 6, 7], 3);
+// function maxSlidingWindow(nums, k) {
+//     let max;
+//     for (let i = 0; i <= nums.length - k; i++) {
+//         max = nums[i];
+//         for (let j = 1; j < k; j++) {
+//             if (nums[i + j] > max) {
+//                 max = nums[i + j];
+//             }
+//         }
+//         console.log(max);
+//     }
+// }
+// maxSlidingWindow([1, 3, -1, -3, 5, 3, 6, 7], 3);
