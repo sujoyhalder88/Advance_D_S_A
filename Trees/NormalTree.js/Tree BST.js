@@ -108,7 +108,7 @@ bst.insert(19);
 bst.insert(3);
 bst.preorder();
 
-bst.inorder();
+// bst.inorder();
 
 /**
  * 10
