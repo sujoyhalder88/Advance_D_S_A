@@ -1,3 +1,5 @@
+// leetcode
+
 let sumUptilNow = 0;
 function revin(root) {
     if (root == null) return;
