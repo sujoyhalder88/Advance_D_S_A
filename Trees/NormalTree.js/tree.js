@@ -48,10 +48,10 @@ root.right.left = new Node(24); // leaf
 root.right.right = new Node(33); // leaf
 
 pre(root);
-console.log("**");
-ino(root);
-console.log("**");
-post(root);
+// console.log("**");
+// ino(root);
+// console.log("**");
+// post(root);
 
 /**
  *
