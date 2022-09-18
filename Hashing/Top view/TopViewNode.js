@@ -122,7 +122,6 @@ class Solution {
     //from left to right in Binary Tree.
     constructor() {
         this.mp = {};
-        this.debug = [];
     }
     pre(root, axis, level) {
         if (root == null) return;
