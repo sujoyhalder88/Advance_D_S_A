@@ -90,6 +90,8 @@ class Hashmap {
 }
 
 let hm = new Hashmap();
+
+4;
 hm.insert("Sanket", [1, 2, 3]);
 
 hm.insert("Sandeepan", 2);
