@@ -6,35 +6,29 @@ class Node {
     }
 }
 
-var hd = 0;
-var mp = {};
-var queue = [];
-function bottomView(root) {
+let mp = {};
+function pre(root, axis, level) {
     if (root == null) return;
-    root.hd = hd;
-    queue.push(root);
-
-    while (queue.length != 0) {
-        var temp = queue.shift();
-        hd = temp.hd;
-        mp[hd] = temp.data;
-
-        if (temp.left != null) {
-            temp.left.hd = hd - 1;
-            queue.push(temp.left);
-        }
-
-        if (temp.right != null) {
-            temp.right.hd = hd + 1;
-            queue.push(temp.right);
+    if (!this.mp[axis]) {
+        this.mp[axis] = [root.data, level];
+    } else {
+        if (level > this.mp[axis][1]) {
+            this.mp[axis] = [root.data, level];
         }
     }
-
-    for (const [d, value] of Object.entries(mp).sort((a, b) => a[0] - b[0])) {
-        console.log(value);
-    }
+    pre(root.left, axis - 1, level + 1);
+    pre(root.right, axis + 1, level + 1);
 }
-
+var bottomView = function (root) {
+    this.mp = {};
+    pre(root, 0, 0);
+    let result = [];
+    let keys = Object.keys(this.mp).sort((a, b) => a - b);
+    for (let i = 0; i < keys.length; i++) {
+        result.push(this.mp[keys[i]][0]);
+    }
+    return result;
+};
 let root = new Node(10); // root
 root.left = new Node(8);
 root.right = new Node(15);
@@ -44,4 +38,4 @@ root.left.right = new Node(9); // leaf
 root.left.right.right = new Node(7);
 root.left.right.right.left = new Node(6);
 
-bottomView(root);
+console.log(bottomView(root));
