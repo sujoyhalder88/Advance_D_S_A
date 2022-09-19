@@ -24,8 +24,8 @@ var rightSideView = function (root) {
     result = [];
     maxLevel = -1;
     rightView(root, 0);
-    console.log(result);
-    // return result;
+    // console.log(result);
+    return result;
 };
 
 let root = new Node(10); // root
@@ -39,4 +39,6 @@ root.left.right.left = new Node(22);
 root.left.right.right = new Node(47);
 root.left.right.right.right = new Node(58);
 
-rightSideView(root);
+// rightSideView(root);
+
+console.log(rightSideView(root));
